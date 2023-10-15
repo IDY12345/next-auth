@@ -5,6 +5,9 @@ import Cryptr from "cryptr";
 import {render} from '@react-email/render'
 import ForgotPasswordEmail from "@/emails/ForgotPasswordEmail";
 import { sendEmail } from "@/config/mail";
+import { connect } from "@/database/mongo.config";
+
+connect()
 
 export async function POST(request:NextRequest)
 {
@@ -55,7 +58,8 @@ export async function POST(request:NextRequest)
                 message:"Email sent successfully.Please Check Your Email"
         })
     } catch (error) {
-        console.log("")
+        console.log("Error : ",error)
+        return NextResponse.json({status:500,message:"Something Went Wrong.Please Try Again!"})
     }
 
 }

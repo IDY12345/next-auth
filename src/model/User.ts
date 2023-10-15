@@ -17,7 +17,7 @@ const userSchema=new Schema({
         type:String,
     },
     avatar:{
-        required:false,
+        required:false, 
         type:String
     },
     role:{
@@ -29,7 +29,7 @@ const userSchema=new Schema({
         required:false,
         type:String,
         trim:true,
-    },
+    }, 
 })
 
 export const User=mongoose.models.User || mongoose.model("User",userSchema);

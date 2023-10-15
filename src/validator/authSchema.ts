@@ -10,3 +10,7 @@ export const loginSchema=vine.object({
     email:vine.string().email(),
     password:vine.string().minLength(8).maxLength(20),
 });
+
+export const resetPasswordSchema=vine.object({
+    password:vine.string().minLength(8).maxLength(20).confirmed(),
+});

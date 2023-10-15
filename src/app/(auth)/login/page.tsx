@@ -63,7 +63,7 @@ export default function Login() {
     })
   }
 
-
+  // Sign In With Google
   const googleLogin=async()=>
   {
     await signIn("google",{
@@ -203,14 +203,14 @@ export default function Login() {
                           {' '}
                           Password{' '}
                         </label>
-                        <a
-                          href="#"
+                        <Link
+                          href="/forgot-password"
                           title=""
                           className="text-sm font-semibold text-black hover:underline"
                         >
                           {' '}
                           Forgot password?{' '}
-                        </a>
+                        </Link>
                       </div>
                       <div className="mt-2">
                         <input
